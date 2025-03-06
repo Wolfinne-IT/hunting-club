@@ -6,7 +6,6 @@
     'category': 'Tools',
     'depends': ['base'],  # List other modules this module depends on
     'data': [
-        'views/hunter_views.xml',
         # List XML/CSV files for views, data, security, etc.
     ],
     'installable': True,
