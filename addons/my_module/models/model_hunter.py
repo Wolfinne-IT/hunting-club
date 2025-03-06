@@ -7,10 +7,3 @@ class ModelHunter(models.Model):
 
     name = fields.Char(string="Name", required=True)
     description = fields.Text(string="Description")
-
-    first_name = fields.Char(string="First Name", required=True)
-    last_name = fields.Char(string="Last Name", required=True)
-    address = fields.Char(string="Address")
-    date_of_birth = fields.Date(string="Date of Birth")
-    job = fields.Char(string="Job")
-    id_number = fields.Char(string="ID Number")
