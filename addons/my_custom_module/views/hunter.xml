@@ -1,0 +1,48 @@
+<odoo>
+  <record id="view_hunter_form" model="ir.ui.view">
+    <field name="name">model.hunter.form</field>
+    <field name="model">my_module.model_hunter</field>
+    <field name="arch" type="xml">
+      <form string="Hunter">
+        <sheet>
+          <group>
+            <field name="name"/>
+            <field name="jmb"/>
+            <field name="birth_year"/>
+            <field name="place_of_residence"/>
+            <field name="address"/>
+            <field name="id_card_number"/>
+          </group>
+          <group>
+            <field name="hunter_course_date"/>
+            <field name="certificate_number"/>
+            <field name="membership_card_number"/>
+            <field name="membership_date"/>
+          </group>
+          <group>
+            <field name="weapon1_make"/>
+            <field name="weapon1_caliber"/>
+            <field name="weapon1_serial"/>
+            <!-- etc. for weapon2, weapon3 -->
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="view_hunter_tree" model="ir.ui.view">
+    <field name="name">model.hunter.tree</field>
+    <field name="model">my_module.model_hunter</field>
+    <field name="arch" type="xml">
+      <tree string="Hunter List">
+        <field name="name"/>
+        <field name="jmb"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- Add a menu item if needed -->
+  <menuitem id="menu_hunter_root" name="Hunters" sequence="10"/>
+  <menuitem id="menu_hunter" name="All Hunters" parent="menu_hunter_root"
+            action="action_hunter"/>
+</odoo>
