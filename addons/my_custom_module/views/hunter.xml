@@ -41,6 +41,12 @@
     </field>
   </record>
 
+  <record id="action_hunter" model="ir.actions.act_window">
+    <field name="name">Hunters</field>
+    <field name="res_model">my_module.model_hunter</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
   <!-- Add a menu item if needed -->
   <menuitem id="menu_hunter_root" name="Hunters" sequence="10"/>
   <menuitem id="menu_hunter" name="All Hunters" parent="menu_hunter_root"
