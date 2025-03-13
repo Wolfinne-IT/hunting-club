@@ -1,6 +1,28 @@
 <odoo>
+  <!-- ACTION -->
+  <record id="action_hunter" model="ir.actions.act_window">
+    <field name="name">Hunters</field>
+    <field name="res_model">my_module.model_hunter</field>
+    <field name="view_mode">list,form</field> <!-- changed from tree,form -->
+  </record>
+
+  <!-- LIST VIEW (was TREE VIEW) -->
+  <record id="view_hunter_list" model="ir.ui.view">
+    <field name="name">model.hunter.list</field>
+    <field name="type">list</field>                 <!-- specify the view type -->
+    <field name="model">my_module.model_hunter</field>
+    <field name="arch" type="xml">
+      <list string="Hunter List">                   <!-- changed <tree> to <list> -->
+        <field name="name"/>
+        <field name="jmb"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- FORM VIEW -->
   <record id="view_hunter_form" model="ir.ui.view">
     <field name="name">model.hunter.form</field>
+    <field name="type">form</field>                 <!-- specify the view type -->
     <field name="model">my_module.model_hunter</field>
     <field name="arch" type="xml">
       <form string="Hunter">
@@ -23,31 +45,16 @@
             <field name="weapon1_make"/>
             <field name="weapon1_caliber"/>
             <field name="weapon1_serial"/>
-            <!-- etc. for weapon2, weapon3 -->
+            <field name="weapon2_make"/>
+            <field name="weapon2_caliber"/>
+            <field name="weapon2_serial"/>
           </group>
         </sheet>
       </form>
     </field>
   </record>
 
-  <record id="view_hunter_tree" model="ir.ui.view">
-    <field name="name">model.hunter.tree</field>
-    <field name="model">my_module.model_hunter</field>
-    <field name="arch" type="xml">
-      <tree string="Hunter List">
-        <field name="name"/>
-        <field name="jmb"/>
-      </tree>
-    </field>
-  </record>
-
-  <record id="action_hunter" model="ir.actions.act_window">
-    <field name="name">Hunters</field>
-    <field name="res_model">my_module.model_hunter</field>
-    <field name="view_mode">tree,form</field>
-  </record>
-
-  <!-- Add a menu item if needed -->
+  <!-- MENU -->
   <menuitem id="menu_hunter_root" name="Hunters" sequence="10"/>
   <menuitem id="menu_hunter" name="All Hunters" parent="menu_hunter_root"
             action="action_hunter"/>

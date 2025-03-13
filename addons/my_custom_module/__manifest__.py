@@ -6,7 +6,8 @@
     'category': 'Tools',
     'depends': ['base'],  # List other modules this module depends on
     'data': [
-        'views/hunter_views.xml',
+        'views/hunter.xml',
+        'views/dog.xml',
     ],
     'installable': True,
     'application': True,
