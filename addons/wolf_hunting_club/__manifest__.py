@@ -1,5 +1,5 @@
 {
-    'name': 'My Custom Module',
+    'name': 'Hunting Club',
     'version': '1.0',
     'summary': 'A short summary of my module',
     'author': 'Your Name',

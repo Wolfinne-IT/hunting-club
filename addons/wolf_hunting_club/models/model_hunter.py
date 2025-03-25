@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class ModelHunter(models.Model):
-    _name = 'my_module.model_hunter'
+    _name = 'hunting_club.model_hunter'
     _description = 'Model Hunter'
 
     # Basic personal info
