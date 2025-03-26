@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class ModelDog(models.Model):
-    _name = 'my_module.model_dog'
+    _name = 'hunting_club.dog'
     _description = 'Model Dog'
 
     # Basic info
@@ -32,4 +32,4 @@ class ModelDog(models.Model):
     mother_name = fields.Char(string="Ime majke")
 
     # Link to owner (optional if you want to connect to Hunter)
-    owner_id = fields.Many2one('my_module.model_hunter', string="Vlasnik")
+    owner_id = fields.Many2one('hunting_club.hunter', string="Vlasnik")

@@ -2,7 +2,7 @@ from odoo import models, fields
 
 
 class ModelGun(models.Model):
-    _name = 'my_module.model_gun'
+    _name = 'hunting_club.gun'
     _description = 'Model Gun'
 
     title = fields.Char(string="Title", required=True)

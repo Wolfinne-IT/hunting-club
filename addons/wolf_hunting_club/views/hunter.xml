@@ -1,18 +1,19 @@
 <odoo>
-  <!-- ACTION -->
+  <!-- ACTION: Show only contacts where is_hunter = True -->
   <record id="action_hunter" model="ir.actions.act_window">
     <field name="name">Hunters</field>
-    <field name="res_model">my_module.model_hunter</field>
-    <field name="view_mode">list,form</field> <!-- changed from tree,form -->
+    <field name="res_model">res.partner</field> <!-- changed from hunting_club.hunter -->
+    <field name="view_mode">list,form</field>
+    <field name="domain">[('is_hunter','=',True)]</field> <!-- Filter only “hunter” contacts -->
   </record>
 
-  <!-- LIST VIEW (was TREE VIEW) -->
+  <!-- LIST VIEW -->
   <record id="view_hunter_list" model="ir.ui.view">
-    <field name="name">model.hunter.list</field>
-    <field name="type">list</field>                 <!-- specify the view type -->
-    <field name="model">my_module.model_hunter</field>
+    <field name="name">res.partner.hunter.list</field>  <!-- new unique name -->
+    <field name="type">list</field>
+    <field name="model">res.partner</field> <!-- changed from hunting_club.hunter -->
     <field name="arch" type="xml">
-      <list string="Hunter List">                   <!-- changed <tree> to <list> -->
+      <list string="Hunter List">
         <field name="name"/>
         <field name="jmb"/>
       </list>
@@ -21,9 +22,9 @@
 
   <!-- FORM VIEW -->
   <record id="view_hunter_form" model="ir.ui.view">
-    <field name="name">model.hunter.form</field>
-    <field name="type">form</field>                 <!-- specify the view type -->
-    <field name="model">my_module.model_hunter</field>
+    <field name="name">res.partner.hunter.form</field>  <!-- new unique name -->
+    <field name="type">form</field>
+    <field name="model">res.partner</field> <!-- changed from hunting_club.hunter -->
     <field name="arch" type="xml">
       <form string="Hunter">
         <sheet>
@@ -31,8 +32,6 @@
             <field name="name"/>
             <field name="jmb"/>
             <field name="birth_year"/>
-            <field name="place_of_residence"/>
-            <field name="address"/>
             <field name="id_card_number"/>
           </group>
           <group>
