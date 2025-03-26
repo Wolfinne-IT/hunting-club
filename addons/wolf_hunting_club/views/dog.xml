@@ -2,7 +2,7 @@
   <!-- ACTION -->
   <record id="action_dog" model="ir.actions.act_window">
     <field name="name">Dogs</field>
-    <field name="res_model">hunting_club.model_dog</field>
+    <field name="res_model">hunting_club.dog</field>
     <field name="view_mode">list,form</field>
   </record>
 
@@ -10,7 +10,7 @@
   <record id="view_dog_list" model="ir.ui.view">
     <field name="name">model.dog.list</field>
     <field name="type">list</field>
-    <field name="model">hunting_club.model_dog</field>
+    <field name="model">hunting_club.dog</field>
     <field name="arch" type="xml">
       <list string="Dog List">
         <field name="name"/>
@@ -24,7 +24,7 @@
   <record id="view_dog_form" model="ir.ui.view">
     <field name="name">model.dog.form</field>
     <field name="type">form</field>
-    <field name="model">hunting_club.model_dog</field>
+    <field name="model">hunting_club.dog</field>
     <field name="arch" type="xml">
       <form string="Dog">
         <sheet>

@@ -4,7 +4,8 @@
     'summary': 'A short summary of my module',
     'author': 'Your Name',
     'category': 'Tools',
-    'depends': ['base'],  # List other modules this module depends on
+    # List other modules this module depends on
+    'depends': ['base', 'contacts'],
     'data': [
         'views/hunter.xml',
         'views/dog.xml',
